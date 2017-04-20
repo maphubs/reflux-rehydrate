@@ -1,6 +1,6 @@
 {
   "name": "reflux-rehydrate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rehydrate RefluxJS stores, to support isomorphic rendering, or loading from local storage (running offline or recovering unsaved data)",
   "main": "./lib/index.js",
   "repository": {
@@ -13,7 +13,7 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "rackt test --single-run --browsers Firefox",
+    "test": "",
     "start": "rackt server"
   },
   "authors": [
