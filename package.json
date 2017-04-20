@@ -1,0 +1,45 @@
+{
+  "name": "reflux-rehydrate",
+  "version": "0.1.0",
+  "description": "Rehydrate RefluxJS stores, to support isomorphic rendering, or loading from local storage (running offline or recovering unsaved data)",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maphubs/reflux-rehydrate"
+  },
+  "homepage": "https://github.com/maphubs/reflux-rehydrate",
+  "bugs": "https://github.com/maphubs/reflux-rehydrate/issues",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "rackt test --single-run --browsers Firefox",
+    "start": "rackt server"
+  },
+  "authors": [
+    "Kristofor Carle <kris@maphubs.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-flowtype": "^2.32.1",
+    "eslint-plugin-react": "^6.10.3",
+    "rackt-cli": "^0.4.0",
+    "react": "^0.13.3",
+    "reflux": "^6.4.1"
+  },
+  "peerDependencies": {
+    "react": "^0.15.5",
+    "reflux": "^6.4.1"
+  },
+  "tags": [
+    ""
+  ],
+  "keywords": [
+    "Reflux",
+    "React",
+    "isomorphic",
+    "rehydrate"
+  ]
+}
