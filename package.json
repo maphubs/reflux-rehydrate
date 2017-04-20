@@ -30,7 +30,7 @@
     "reflux": "^6.4.1"
   },
   "peerDependencies": {
-    "react": "^0.15.5",
+    "react": "^15.5.0",
     "reflux": "^6.4.1"
   },
   "tags": [
