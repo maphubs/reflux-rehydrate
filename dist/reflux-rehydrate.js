@@ -59,6 +59,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
+	exports.initStore = initStore;
+	exports.createActions = createActions;
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -66,23 +68,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _reflux2 = _interopRequireDefault(_reflux);
 	
-	exports['default'] = {
-	
-	  initStore: function initStore(str) {
-	    str.prototype.rehydrate = function (state) {
-	      this.setState(state);
-	    };
-	    _reflux2['default'].initStore(str);
-	  },
-	
-	  createActions: function createActions(actions) {
-	    var rehydrateActions = ['rehydrate'];
-	    actions = rehydrateActions.concat(actions);
-	    return _reflux2['default'].createActions(actions);
-	  }
-	
+	_reflux2['default'].rehydrate = function (str, data) {
+	  return _reflux2['default'].initStore(str).setState(data);
 	};
-	module.exports = exports['default'];
+	
+	exports['default'] = _reflux2['default'];
+	
+	function initStore(str) {
+	  str.prototype.rehydrate = function (state) {
+	    this.setState(state);
+	  };
+	  return _reflux2['default'].initStore(str);
+	}
+	
+	function createActions(actions) {
+	  var rehydrateActions = ['rehydrate'];
+	  actions = rehydrateActions.concat(actions);
+	  return _reflux2['default'].createActions(actions);
+	}
 
 /***/ }),
 /* 1 */
